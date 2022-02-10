@@ -19,7 +19,7 @@
     "test": "echo 'no tests!'",
     "prepublishOnly": "npm run build",
     "build": "npm run build:icons && npm run build:dist",
-    "build:dist": "bili --format umd,es,cjs,umd-min --js buble --name vue-feather-icons",
+    "build:dist": "bili --minimal --file-name vue3-feather-icons, --module-name vue3-feather-icons",
     "build:icons": "node build && babel src/components -d icons",
     "example": "poi --serve --config example/poi.config.js",
     "build:example": "poi --prod --config example/poi.config.js",
@@ -27,13 +27,16 @@
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "babel-helper-vue-jsx-merge-props": "^2.0.2"
-  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
-    "bili": "^3.4.2",
+    "@vue/babel-plugin-jsx": "^1.1.1",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "bili": "^5.0.5",
     "eslint-config-rem": "^4.0.0",
     "feather-icons": "^4.28.0",
     "fs-extra": "^8.0.1",
@@ -43,19 +46,15 @@
     "poi": "^12.4.4",
     "prismjs": "^1.6.0",
     "typeface-nunito": "^0.0.72",
-    "v-tippy": "^1.0.0",
-    "vue": "^2.5.22",
-    "vue-github-badge": "^1.0.1",
-    "vue-template-compiler": "^2.5.22"
+    "vue": "^3.0.0",
+    "vue-tippy": "^6.0.0-alpha.47"
   },
   "babel": {
     "presets": [
-      [
-        "poi/babel",
-        {
-          "jsx": "vue"
-        }
-      ]
+      "bili/babel"
+    ],
+    "plugins": [
+      "@vue/babel-plugin-jsx"
     ]
   }
 }
