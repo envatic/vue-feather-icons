@@ -3,7 +3,7 @@
     <github
       v-tippy="{ title: 'Star me on GitHub', trigger: 'mouseenter ' }"
       fill="white"
-      slug="egoist/vue-feather-icons"
+      slug="envatic/vue-feather-icons"
     >
     </github>
     <header class="header">
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="support">
         🤩 If this project has helped you, please consider
-        <a href="https://github.com/sponsors/egoist" target="_blank"
+        <a href="https://github.com/sponsors/envatic" target="_blank"
           >sponsoring me on GitHub</a
         >!
       </div>
@@ -33,7 +33,7 @@
         <div
           class="icon"
           v-tippy="{ interactive: true }"
-          :title="example"
+          :content="example"
           v-for="icon in filteredIcons"
           @click="handleClickIcon(icon)"
           :key="icon"
@@ -51,7 +51,7 @@
             v-tippy="{ interactive: true }"
             @click="handleClickSize(size)"
             :key="size"
-            :title="sizeExample(size)"
+            :content="sizeExample(size)"
           >
             <div class="size-label">
               {{ size }}{{ size === "1x" ? " (default)" : "" }}
@@ -66,7 +66,7 @@
     <footer class="footer">
       <div class="container">
         &copy; {{ year }} Brought by
-        <a href="https://github.com/egoist">EGOIST</a>
+        <a href="https://github.com/envatic">envatic</a>
       </div>
     </footer>
   </div>
@@ -74,7 +74,7 @@
 
 <script>
 import kebab from "lodash.kebabcase";
-import Github from "vue-github-badge";
+import Github from "./Github.vue";
 import * as icons from "../src";
 import example from "./example.md";
 
@@ -125,7 +125,8 @@ export default {
 };
 </script>
 
-<style src="v-tippy/dist/tippy.css"></style>
+<style src="tippy.js/dist/tippy.css"></style>
+<style src="tippy.js/themes/light.css"></style>
 <style src="prismjs/themes/prism.css"></style>
 
 <style>

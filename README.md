@@ -1,6 +1,6 @@
 # vue-feather-icons
 
-[![NPM version](https://img.shields.io/npm/v/vue-feather-icons.svg?style=flat)](https://npmjs.com/package/vue-feather-icons) [![NPM downloads](https://img.shields.io/npm/dm/vue-feather-icons.svg?style=flat)](https://npmjs.com/package/vue-feather-icons) [![CircleCI](https://circleci.com/gh/egoist/vue-feather-icons/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/vue-feather-icons/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
+[![NPM version](https://img.shields.io/npm/v/vue-feather-icons.svg?style=flat)](https://npmjs.com/package/vue-feather-icons) [![NPM downloads](https://img.shields.io/npm/dm/vue-feather-icons.svg?style=flat)](https://npmjs.com/package/vue-feather-icons) [![CircleCI](https://circleci.com/gh/envatic/vue-feather-icons/tree/master.svg?style=shield)](https://circleci.com/gh/envatic/vue-feather-icons/tree/master) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/envatic/donate)
 
 ## Install
 
@@ -15,23 +15,23 @@ yarn add vue-feather-icons
 import { AirplayIcon, AtSignIcon, ... } from 'vue-feather-icons'
 ```
 
-See all icons and usage here: https://vue-feather-icons.egoist.sh
+See all icons and usage here: https://vue-feather-icons.envatic.sh
 
 ### Sizing
 
 By default, icons will be sized based on the font size of the parent element.
 
-You can set a custom size using the `size` attribute. 
+You can set a custom size using the `size` attribute.
 For multiple based sizing, pass the desired multiple followed by an `x`.
 
 ```html
-<activity-icon size="1.5x" class="custom-class"></activity-icon> 
+<activity-icon size="1.5x" class="custom-class"></activity-icon>
 ```
 
 You can also set a `px` size directly by just passing an integer
 
 ```html
-<activity-icon size="25" class="custom-class"></activity-icon> 
+<activity-icon size="25" class="custom-class"></activity-icon>
 ```
 
 ## Tree shaking
@@ -42,7 +42,7 @@ To make webpack tree shaking work without using any minifier, you can use the pe
 
 ## Related
 
-- [vue-bytesize-icons](https://github.com/egoist/vue-bytesize-icons)
+- [vue-bytesize-icons](https://github.com/envatic/vue-bytesize-icons)
 
 ## Contributing
 
@@ -52,10 +52,9 @@ To make webpack tree shaking work without using any minifier, you can use the pe
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-
 ## Author
 
-**vue-feather-icons** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/vue-feather-icons/contributors)).
+**vue-feather-icons** © [envatic](https://github.com/envatic), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by envatic with help from contributors ([list](https://github.com/envatic/vue-feather-icons/contributors)).
 
-> [egoist.moe](https://egoist.moe) · GitHub [@egoist](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)
+> [envatic.moe](https://envatic.moe) · GitHub [@envatic](https://github.com/envatic) · Twitter [@\_envaticlily](https://twitter.com/_envaticlily)

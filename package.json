@@ -3,7 +3,7 @@
   "version": "4.22.0",
   "description": "Simply beautiful open source icons as Vue functional components.",
   "repository": {
-    "url": "egoist/vue-feather-icons",
+    "url": "envatic/vue-feather-icons",
     "type": "git"
   },
   "main": "dist/vue-feather-icons.cjs.js",
@@ -21,12 +21,16 @@
     "build": "npm run build:icons && npm run build:dist",
     "build:dist": "bili --minimal --file-name vue3-feather-icons, --module-name vue3-feather-icons",
     "build:icons": "node build && babel src/components -d icons",
-    "example": "poi --serve --config example/poi.config.js",
-    "build:example": "poi --prod --config example/poi.config.js",
-    "prebuild:example": "npm run build:icons"
+    "prebuild:example": "npm run build:icons",
+    "example": "vue-cli-service serve example/main.js",
+    "build:example": "vue-cli-service build example/main.js"
   },
-  "author": "egoist <0x142857@gmail.com>",
+  "author": "envatic <0x142857@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -36,6 +40,8 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
     "bili": "^5.0.5",
     "eslint-config-rem": "^4.0.0",
     "feather-icons": "^4.28.0",
@@ -56,5 +62,24 @@
     "plugins": [
       "@vue/babel-plugin-jsx"
     ]
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

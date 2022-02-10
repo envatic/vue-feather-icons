@@ -4,12 +4,11 @@
 </template>
 
 <script>
-import { ICON } from 'vue-feather-icons'
-
+import { ICON } from "vue-feather-icons";
 export default {
   components: {
-    ICON
-  }
-}
+    ICON,
+  },
+};
 </script>
 ```
